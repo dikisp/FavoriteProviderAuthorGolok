@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/horizontal"
+    android:layout_marginTop="@dimen/vertical"
+    android:layout_marginEnd="@dimen/horizontal"
+    android:layout_marginBottom="@dimen/vertical"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/vertical"
+            android:layout_marginTop="@dimen/vertical"
+            android:layout_marginEnd="@dimen/vertical"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/poster_movie"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Joker" />
+
+        <TextView
+            android:id="@+id/tv_movie_description"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/horizontal"
+            android:layout_marginBottom="@dimen/vertical"
+            android:ellipsize="end"
+            android:maxLines="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_movie_title"
+            app:layout_constraintStart_toStartOf="@id/tv_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            tools:text="Joker adalah sebuah karakter penjahat super fiksi yang dibuat oleh Bill Finger, Bob Kane, dan Jerry Robinson yang pertama kali muncul dalam keluaran debut buku komik Batman (25 April 1940) yang diterbitkan oleh DC Comics" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/poster_movie"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundBottomEnd="false"
+            app:roundTopEnd="false"
+            app:roundedCornerRadius="4dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
